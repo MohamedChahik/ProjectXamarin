@@ -1,0 +1,143 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth.Android\\Auth.Android.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth.Android\\Auth.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth.Android\\Auth.Android.csproj",
+        "projectName": "Auth.Android",
+        "projectPath": "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth.Android\\Auth.Android.csproj",
+        "packagesPath": "C:\\Users\\Matthieu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth.Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\Matthieu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid12.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid12.0": {
+            "projectReferences": {
+              "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth\\Auth.csproj": {
+                "projectPath": "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth\\Auth.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid12.0": {
+          "dependencies": {
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
+            }
+          }
+        }
+      }
+    },
+    "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth\\Auth.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth\\Auth.csproj",
+        "projectName": "Auth",
+        "projectPath": "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth\\Auth.csproj",
+        "packagesPath": "C:\\Users\\Matthieu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matthieu\\source\\repos\\Auth\\Auth\\Auth\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Matthieu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.2.0.562, )"
+            },
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[3.7.2, )"
+            },
+            "FirebaseDatabase.net": {
+              "target": "Package",
+              "version": "[4.0.7, )"
+            },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
+            },
+            "Xamarin.Plugin.FilePicker": {
+              "target": "Package",
+              "version": "[2.1.41, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

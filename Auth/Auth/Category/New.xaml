@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Auth.Category.New">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="news"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button BackgroundColor="Orange" TextColor="White" Text="view post" Clicked="newpost_Clicked" x:Name="newpost"/>
+            <Button BackgroundColor="Orange" TextColor="White" Text="Add post" Clicked="addnewpost_Clicked" x:Name="addnewpost"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

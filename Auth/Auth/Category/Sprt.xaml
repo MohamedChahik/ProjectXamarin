@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Auth.Category.Sprt">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Sport"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button BackgroundColor="Orange" TextColor="White" Text="view post" Clicked="sportpost_Clicked" x:Name="sportpost"/>
+            <Button BackgroundColor="Orange" TextColor="White" Text="Add post" Clicked="addsportpost_Clicked" x:Name="addsportpost"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
