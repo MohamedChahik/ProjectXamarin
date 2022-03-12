@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using FBGroupingApp.Client.ViewModel;
+
 using Xamarin.Forms;
 
 namespace FBGroupingApp.Client.Model

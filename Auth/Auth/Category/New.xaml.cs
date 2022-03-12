@@ -1,4 +1,5 @@
 ﻿using Auth.Client.Views;
+using Auth.Server.Views;
 using Auth.Serveur.Views;
 using System;
 using System.Collections.Generic;
@@ -20,12 +21,12 @@ namespace Auth.Category
         }
         void newpost_Clicked(object sender, EventArgs args)
         {
-            App.Current.MainPage = new NavigationPage(new NewsPage());
+            App.Current.MainPage = new NavigationPage(new PostNews());
         }
 
         void addnewpost_Clicked(object sender, EventArgs args)
         {
-            App.Current.MainPage = new NavigationPage(new AdminNewsFeedPage());
+            App.Current.MainPage = new NavigationPage(new NewsFeedNews());
         }
     }
 }

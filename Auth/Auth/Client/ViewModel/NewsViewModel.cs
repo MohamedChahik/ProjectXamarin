@@ -8,7 +8,7 @@ using Firebase.Database;
 using Firebase.Storage;
 using Xamarin.Forms;
 
-namespace FBGroupingApp.Client.ViewModel
+namespace Client.ViewModel
 {
     public class NewsViewModel : BindableObject
     {
@@ -56,7 +56,7 @@ namespace FBGroupingApp.Client.ViewModel
                     {
                         var filepath = await firebaseStorage
                             .Child("Interplanetary")
-                            .Child("cat.png").GetDownloadUrlAsync();
+                            .Child(groupitems.IDentifier+ ".png").GetDownloadUrlAsync();
                             
                         newsGroup.Add(new ClientNewsModel() { News = groupitems.NewsText, NewsImagePath = filepath });
                     }

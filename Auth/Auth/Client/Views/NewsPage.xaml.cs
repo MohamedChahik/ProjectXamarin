@@ -1,4 +1,5 @@
-﻿using FBGroupingApp.Client.ViewModel;
+﻿using Client.ViewModel;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
