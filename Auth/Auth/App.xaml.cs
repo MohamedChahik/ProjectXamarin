@@ -10,14 +10,14 @@ namespace Auth
         public App()
         {
             InitializeComponent();
-            if (!string.IsNullOrEmpty(Preferences.Get("MyFirebaseRefreshToken", "")))
+            /*if (!string.IsNullOrEmpty(Preferences.Get("MyFirebaseRefreshToken", "")))
             {
                 MainPage = new NavigationPage(new MyDashBoardPage());
             }
             else
-            {
+            {*/
                 MainPage = new NavigationPage(new Splash());
-            }
+            
         }
 
         protected override void OnStart()

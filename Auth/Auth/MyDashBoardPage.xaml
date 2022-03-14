@@ -27,7 +27,9 @@
 
             </Grid>
             <Label Text="Curent User :" x:Name="MyUserName" FontSize="Caption" TextColor="Black"></Label>
-            <Button x:Name="Logout" Text="Logout" BackgroundColor="Black" TextColor="White" Clicked="Logout_Clicked"/>
+            <Button x:Name="Account" Text="Account" BackgroundColor="Black" TextColor="White" Clicked="Account_Clicked"/>
+            <!--
+            <Button x:Name="Logout" Text="Logout" BackgroundColor="Black" TextColor="White" Clicked="Logout_Clicked"/> -->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

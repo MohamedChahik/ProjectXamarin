@@ -30,3 +30,6 @@ C:\Users\Matthieu\source\repos\Auth\Auth\Auth\obj\Debug\netstandard2.0\Server\Vi
 C:\Users\Matthieu\source\repos\Auth\Auth\Auth\obj\Debug\netstandard2.0\Server\Views\NewsFeedNews.xaml.g.cs
 C:\Users\Matthieu\source\repos\Auth\Auth\Auth\obj\Debug\netstandard2.0\Server\Views\NewsFeedPro.xaml.g.cs
 C:\Users\Matthieu\source\repos\Auth\Auth\Auth\obj\Debug\netstandard2.0\Server\Views\NewsFeedSport.xaml.g.cs
+C:\Users\Matthieu\source\repos\Auth\Auth\Auth\obj\Debug\netstandard2.0\Connexion\View\WelcomPage.xaml.g.cs
+C:\Users\Matthieu\source\repos\Auth\Auth\Auth\obj\Debug\netstandard2.0\Connexion\View\XF_LoginPage.xaml.g.cs
+C:\Users\Matthieu\source\repos\Auth\Auth\Auth\obj\Debug\netstandard2.0\Connexion\View\XF_SignUpPage.xaml.g.cs

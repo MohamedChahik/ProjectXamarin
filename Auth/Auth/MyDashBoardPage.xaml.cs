@@ -1,5 +1,7 @@
 ﻿using Auth.Category;
+using Auth.Connexion.View;
 using Firebase.Auth;
+
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -46,13 +48,15 @@ namespace Auth
 
         }
 
-        void Logout_Clicked(System.Object sender, System.EventArgs e)
+
+
+       /* void Logout_Clicked(System.Object sender, System.EventArgs e)
         {
             Preferences.Remove("MyFirebaseRefreshToken");
             App.Current.MainPage = new NavigationPage(new MainPage());
 
-        }
-       void Sport_Clicked(object sender, EventArgs args)
+        }*/
+        void Sport_Clicked(object sender, EventArgs args)
         {
             App.Current.MainPage = new NavigationPage(new Sprt());
         }
@@ -67,6 +71,10 @@ namespace Auth
         void Pros_Clicked(object sender, EventArgs args)
         {
             App.Current.MainPage = new NavigationPage(new Pro());
+        }
+        void Account_Clicked(object sender, EventArgs args)
+        {
+           // App.Current.MainPage.Navigation.PushAsync(new WelcomPage());
         }
 
     }

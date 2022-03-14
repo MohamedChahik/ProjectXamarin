@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Auth.Connexion.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XF_Login.ViewModel;
 
 namespace Auth
 {
@@ -40,7 +42,7 @@ namespace Auth
             await imagelancement.ScaleTo(0.9, 1500 , Easing.Linear);
             await imagelancement.ScaleTo(2,1200 ,Easing.Linear);
 
-            Application.Current.MainPage = new NavigationPage( new MainPage());
+            Application.Current.MainPage = new NavigationPage(new XF_LoginPage());
         }
     }
 }
