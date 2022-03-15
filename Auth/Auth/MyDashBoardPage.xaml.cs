@@ -72,9 +72,18 @@ namespace Auth
         {
             App.Current.MainPage = new NavigationPage(new Pro());
         }
-        void Account_Clicked(object sender, EventArgs args)
+        void cat_Clicked(object sender, EventArgs args)
         {
-           // App.Current.MainPage.Navigation.PushAsync(new WelcomPage());
+            App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
+        }
+        void cpt_Clicked(object sender, EventArgs args)
+        {
+            App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
+        }
+        void contact_Clicked(object sender, EventArgs args)
+        {
+            App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
+
         }
 
     }

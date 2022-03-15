@@ -1,10 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Auth.Connexion.View.WelcomPage">
+             x:Class="Auth.Connexion.View.WelcomPage"
+              Title="Iris">
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Text="Categorie" Clicked="cat_Clicked"  ></ToolbarItem>
+        <ToolbarItem Text="Compte" Clicked="cpt_Clicked" ></ToolbarItem>
+        <ToolbarItem Text="Contact" Clicked="contact_Clicked" ></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
+            <StackLayout Margin="20" VerticalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical">
                 
                 
                 <Label Text="{Binding Email, StringFormat='Welcome {0}'}" Margin="10"/>
