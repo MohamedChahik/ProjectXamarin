@@ -27,5 +27,18 @@ namespace Auth.Connexion.View
         {
             App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
         }
+        void cat_Clicked(object sender, EventArgs args)
+        {
+            App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
+        }
+        void cpt_Clicked(object sender, EventArgs args)
+        {
+            App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
+        }
+        void contact_Clicked(object sender, EventArgs args)
+        {
+            App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
+
+        }
     }
 }

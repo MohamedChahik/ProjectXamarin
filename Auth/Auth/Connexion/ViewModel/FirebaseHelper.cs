@@ -25,11 +25,11 @@ namespace XF_Login.ViewModel
                 .OnceAsync<Users>()).Select(item =>
                 new Users
                 {
-                    
-                    
+
                     Email = item.Object.Email,
                     Password = item.Object.Password,
-                    Pseudo = item.Object.Pseudo
+                    IsPremium = item.Object.IsPremium
+                   
                 }).ToList();
                 return userlist;
             }
@@ -59,7 +59,7 @@ namespace XF_Login.ViewModel
         }
 
         //Inser a user
-        public static async Task<bool> AddUser(string email,string password,string pseudo)
+        public static async Task<bool> AddUser( string email,string password, Boolean ispremium)
         {
             try
             {
@@ -67,7 +67,8 @@ namespace XF_Login.ViewModel
 
                 await firebase
                 .Child("Users")
-                .PostAsync(new Users() { Email = email, Password = password, Pseudo = pseudo });
+                .PostAsync(new Users() {  Email = email, Password = password, IsPremium=ispremium});
+
                 return true;
             }
             catch(Exception e)
@@ -78,7 +79,7 @@ namespace XF_Login.ViewModel
         }
 
         //Update 
-        public static async Task<bool> UpdateUser( string email, string password,string pseudo)
+        public static async Task<bool> UpdateUser(string email, string password)
         {
             try
             {
@@ -90,7 +91,7 @@ namespace XF_Login.ViewModel
                 await firebase
                 .Child("Users")
                 .Child(toUpdateUser.Key)
-                .PutAsync(new Users() { Email = email, Password = password, Pseudo = pseudo });
+                .PutAsync(new Users() { Email = email, Password = password});
                 return true;
             }
             catch(Exception e)
@@ -99,6 +100,8 @@ namespace XF_Login.ViewModel
                 return false;
             }
         }
+
+       
 
         //Delete User
         public static async Task<bool> DeleteUser(string email)

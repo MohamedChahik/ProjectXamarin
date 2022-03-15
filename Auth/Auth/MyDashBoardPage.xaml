@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Auth.MyDashBoardPage"
              BackgroundColor="White"
-             Title="Mon Appli">
+              Title="Iris">
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Text="Categorie" Clicked="cat_Clicked"  ></ToolbarItem>
+        <ToolbarItem Text="Compte" Clicked="cpt_Clicked" ></ToolbarItem>
+        <ToolbarItem Text="Contact" Clicked="contact_Clicked" ></ToolbarItem>
+    </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <StackLayout>
@@ -27,7 +32,7 @@
 
             </Grid>
             <Label Text="Curent User :" x:Name="MyUserName" FontSize="Caption" TextColor="Black"></Label>
-            <Button x:Name="Account" Text="Account" BackgroundColor="Black" TextColor="White" Clicked="Account_Clicked"/>
+           
             <!--
             <Button x:Name="Logout" Text="Logout" BackgroundColor="Black" TextColor="White" Clicked="Logout_Clicked"/> -->
         </StackLayout>

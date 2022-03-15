@@ -69,7 +69,7 @@ namespace XF_Login.ViewModel
             {
                 if (!string.IsNullOrEmpty(Password))
                 {
-                    var isupdate = await FirebaseHelper.UpdateUser( Email, Password, Pseudo);
+                    var isupdate = await FirebaseHelper.UpdateUser(Email, Password);
                     if (isupdate)
                         await App.Current.MainPage.DisplayAlert("Update Success", "", "Ok");
                     else

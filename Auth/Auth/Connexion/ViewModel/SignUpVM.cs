@@ -11,8 +11,17 @@ namespace XF_Login.ViewModel
 {
    public class SignUpVM: INotifyPropertyChanged
     {
-      
 
+        private string pseudo;
+        /*public string Pseudo
+        {
+            get { return pseudo; }
+            set
+            {
+                Pseudo = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("Email"));
+            }
+        }*/
         private string email;
         public string Email
         {
@@ -47,16 +56,18 @@ namespace XF_Login.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs("ConfirmPassword"));
             }
         }
-        private string pseudo;
-        public string Pseudo
+
+        private Boolean ispremium;
+        public Boolean IsPremium
         {
-            get { return pseudo; }
+            get { return ispremium; }
             set
             {
-                Pseudo = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("Pseudo"));
+                ispremium = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("IsPremium"));
             }
         }
+
         public Command SignUpCommand
         {
             get
@@ -79,7 +90,7 @@ namespace XF_Login.ViewModel
             else
             {
                 //call AddUser function which we define in Firebase helper class
-                var user = await FirebaseHelper.AddUser(Email,Password,Pseudo);
+                var user = await FirebaseHelper.AddUser( Email, Password,IsPremium);
                 //AddUser return true if data insert successfuly 
                 if (user)
                 {

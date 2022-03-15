@@ -66,7 +66,8 @@ namespace XF_Login.ViewModel
                 if(user!=null)
                 if (Email == user.Email && Password == user.Password)
                 {
-                await  App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
+                    
+                        await  App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
                         //Navigate to Wellcom page after successfuly login
                         //pass user email to welcom page
                         await App.Current.MainPage.Navigation.PushAsync(new WelcomPage(Email));
