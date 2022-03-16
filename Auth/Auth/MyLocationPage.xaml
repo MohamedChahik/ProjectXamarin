@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Auth.MyLocationPage">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="0,0,0,10" CornerRadius="0">
+            <Label Text="Our location!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <maps:Map x:Name="map"
+               IsShowingUser="True"
+               MoveToLastRegionOnLayoutChange="False">
+            <x:Arguments>
+                <maps:MapSpan>
+                    <x:Arguments>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>48.88509315938078</x:Double>
+                                <x:Double>2.293312490515527</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                        <x:Double>0.01</x:Double>
+                        <x:Double>0.01</x:Double>
+                    </x:Arguments>
+                </maps:MapSpan>
+            </x:Arguments>
+            <maps:Map.Pins>
+                <maps:Pin Label="School Iris"
+                       Address="6-8 Imp. des 2 Cousins, 75017 Paris"
+                       Type="Place">
+                    <maps:Pin.Position>
+                        <maps:Position>
+                            <x:Arguments>
+                                <x:Double>48.88509315938078</x:Double>
+                                <x:Double>2.293312490515527</x:Double>
+                            </x:Arguments>
+                        </maps:Position>
+                    </maps:Pin.Position>
+                </maps:Pin>
+            </maps:Map.Pins>
+        </maps:Map>
+
+    </StackLayout>
+</ContentPage>

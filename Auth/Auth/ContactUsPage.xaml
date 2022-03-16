@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Auth.ContactUsPage">
+    <StackLayout>
+            <!-- Main layout-->
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="20,0">
+        <!--Timeline -->
+        <Frame Grid.Row="0" BorderColor="White" VerticalOptions="Start" HeightRequest="160" HasShadow="False" CornerRadius="20" Margin="0,45,0,20" Padding="0" IsClippedToBounds="True">
+            <Image Source="pros" Aspect="AspectFill"/>
+        </Frame>
+        <!-- Image Profile-->
+        <Frame Grid.Row="1" Margin="0,-90,0,0" BorderColor="White" HorizontalOptions="Center" WidthRequest="110" HeightRequest="{OnPlatform iOS='110', Android='20'}" HasShadow="False" CornerRadius="55" Padding="0" IsClippedToBounds="True">
+            <Image Source="splash" Aspect="AspectFill"/>
+        </Frame>
+        <!-- Profile name & general description-->
+        <Label Grid.Row="2" Text="Ecole Iris" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="22"/>
+        <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0">
+            <Button Grid.Column="0" ImageSource="location" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#2097F4
+"/>
+            <Label Grid.Column="1" Text=" Paris, 75017" FontSize="15" TextColor="#9192b7"/>
+                <Button Grid.Column="2" ImageSource="age" Margin="10,0,0,0" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#2097F4" Clicked="findUsButton"/>
+            <Label Grid.Column="3" Text=" +3306060606" FontSize="15" TextColor="#9192b7"/>
+            <!-- <Button Grid.Column="4" Text="Regular" TextColor="White" FontAttributes="Bold" Margin="5,0,0,0" CornerRadius="10" FontSize="9" WidthRequest="{OnPlatform iOS='50', Android='59'}" HeightRequest="{OnPlatform iOS='21', Android='30'}" BackgroundColor="#2097F4"/>
+-->
+        </Grid>
+
+            <Button Grid.Row="4"  Text="find Us!"
+                    HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+     
+                Clicked="findUsButton" />
+
+            <Label Grid.Row="5" Text="Commentaire" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Start" Margin="0,40,0,20" FontSize="20"/>
+        <Label Grid.Row="6" TextColor="#8d92b9" HorizontalTextAlignment="Start" FontSize="15" 
+                   Text="Ceci est le descriptif de notre application"/>
+    </Grid>
+        </StackLayout>
+</ContentPage>

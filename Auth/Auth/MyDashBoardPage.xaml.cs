@@ -82,7 +82,7 @@ namespace Auth
         }
         void contact_Clicked(object sender, EventArgs args)
         {
-            App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
+            App.Current.MainPage = new NavigationPage(new ContactUsPage());
 
         }
 
