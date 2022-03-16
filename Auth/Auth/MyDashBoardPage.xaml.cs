@@ -80,10 +80,10 @@ namespace Auth
         {
             App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
         }
-        void contact_Clicked(object sender, EventArgs args)
+        async void contact_Clicked(object sender, EventArgs args)
         {
-            App.Current.MainPage = new NavigationPage(new ContactUsPage());
-
+/*            App.Current.MainPage = new NavigationPage(new ContactUsPage());*/
+            await Navigation.PushAsync(new ContactUsPage());
         }
 
     }

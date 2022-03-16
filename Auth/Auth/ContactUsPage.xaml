@@ -16,10 +16,9 @@
         <!-- Profile name & general description-->
         <Label Grid.Row="2" Text="Ecole Iris" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="22"/>
         <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0">
-            <Button Grid.Column="0" ImageSource="location" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#2097F4
-"/>
+                <Button Grid.Column="0" ImageSource="location" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#2097F4" Clicked="findUsButton"/>
             <Label Grid.Column="1" Text=" Paris, 75017" FontSize="15" TextColor="#9192b7"/>
-                <Button Grid.Column="2" ImageSource="age" Margin="10,0,0,0" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#2097F4" Clicked="findUsButton"/>
+                <Button Grid.Column="2" ImageSource="age" Margin="10,0,0,0" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#2097F4" />
             <Label Grid.Column="3" Text=" +3306060606" FontSize="15" TextColor="#9192b7"/>
             <!-- <Button Grid.Column="4" Text="Regular" TextColor="White" FontAttributes="Bold" Margin="5,0,0,0" CornerRadius="10" FontSize="9" WidthRequest="{OnPlatform iOS='50', Android='59'}" HeightRequest="{OnPlatform iOS='21', Android='30'}" BackgroundColor="#2097F4"/>
 -->

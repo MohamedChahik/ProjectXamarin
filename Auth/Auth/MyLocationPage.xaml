@@ -2,11 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-             x:Class="Auth.MyLocationPage">
+             x:Class="Auth.MyLocationPage"
+              Title="Our location!">
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="0,0,0,10" CornerRadius="0">
-            <Label Text="Our location!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
         <maps:Map x:Name="map"
                IsShowingUser="True"
                MoveToLastRegionOnLayoutChange="False">
