@@ -23,6 +23,13 @@ namespace Auth
 
          async void signupbutton_Clicked(System.Object sender, System.EventArgs e)
         {
+            activity.IsEnabled = true;
+            activity.IsRunning = true;
+            activity.IsVisible = true;
+            await Task.Delay(2000);
+            activity.IsEnabled = false;
+            activity.IsRunning = false;
+            activity.IsVisible = false;
             try
             {
                 var authProvider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIkey));
@@ -38,9 +45,16 @@ namespace Auth
 
         async void Back_Clicked(object sender, EventArgs e)
         {
+            activity.IsEnabled = true;
+            activity.IsRunning = true;
+            activity.IsVisible = true;
+            await Task.Delay(2000);
+            activity.IsEnabled = false;
+            activity.IsRunning = false;
+            activity.IsVisible = false;
             await Navigation.PushAsync(new MainPage());
         }
-
+      
 
     }
 }

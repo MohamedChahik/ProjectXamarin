@@ -12,29 +12,28 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="                          " TextColor="Black" FontSize="25"></Label>
-            <Label Text="  Listes de catégories:" TextColor="Black" FontSize="25" FontAttributes="Bold"></Label>
-            <Label Text="                          " TextColor="Black" FontSize="25"></Label>
+            <Label Text="                          " TextColor="#2f2e41" FontSize="25"></Label>
+            <Label Text="  Listes de catégories:" TextColor="#325785" FontSize="25" FontAttributes="Bold"></Label>
+            <Label Text="                          " TextColor="#2f2e41" FontSize="25"></Label>
             <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*">
                 <ImageButton Source="breakfast" Margin="15"
                              
             BackgroundColor="white"
-            BorderWidth="1" BorderColor="Black"
+            BorderWidth="1" BorderColor="#325785"
                 Clicked="Food_Clicked"
             FlexLayout.Grow="1"
                              
             Aspect="AspectFit">
                 </ImageButton>
-                <ImageButton Source="sport" Grid.Row="0" Grid.Column="1" BackgroundColor="White" BorderWidth="1" BorderColor="Black" Margin="15" Clicked="Sport_Clicked" />
+                <ImageButton Source="sport" Grid.Row="0" Grid.Column="1" BackgroundColor="White" BorderWidth="1" BorderColor="#325785" Margin="15" Clicked="Sport_Clicked" />
 
-                <ImageButton Source="news" Grid.Row="1" Grid.Column="0" BackgroundColor="White" BorderWidth="1" BorderColor="Black" Margin="15" Clicked="News_Clicked"/>
-                <ImageButton Source="pros" Grid.Row="1" Grid.Column="1" BackgroundColor="White" BorderWidth="1" BorderColor="Black" Margin="15" Clicked="Pros_Clicked" />
+                <ImageButton Source="news" Grid.Row="1" Grid.Column="0" BackgroundColor="White" BorderWidth="1" BorderColor="#325785" Margin="15" Clicked="News_Clicked"/>
+                <ImageButton Source="pros" Grid.Row="1" Grid.Column="1" BackgroundColor="White" BorderWidth="1" BorderColor="#325785" Margin="15" Clicked="Pros_Clicked" />
 
             </Grid>
-            <Label Text="Curent User :" x:Name="MyUserName" FontSize="Caption" TextColor="Black"></Label>
-           
-            <!--
-            <Button x:Name="Logout" Text="Logout" BackgroundColor="Black" TextColor="White" Clicked="Logout_Clicked"/> -->
+            <Label Text="Curent User :" x:Name="MyUserName" FontSize="Caption" TextColor="#325785" Margin="15"></Label>
+
+            <Button x:Name="Logout" Text="Logout" BackgroundColor="#325785" TextColor="White" Clicked="Logout_Clicked" Margin="15"/> 
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

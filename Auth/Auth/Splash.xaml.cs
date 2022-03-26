@@ -42,7 +42,7 @@ namespace Auth
             await imagelancement.ScaleTo(0.9, 1500 , Easing.Linear);
             await imagelancement.ScaleTo(2,1200 ,Easing.Linear);
 
-            Application.Current.MainPage = new NavigationPage(new XF_LoginPage());
+            Application.Current.MainPage = new NavigationPage(new MainPage());
         }
     }
 }

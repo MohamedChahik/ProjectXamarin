@@ -1,16 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Auth.Register">
+             x:Class="Auth.Register"
+              BackgroundColor="White">
     
     <ContentPage.Content>
-        <StackLayout Margin="20" VerticalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical">
+        <StackLayout Margin="20" VerticalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical"  BackgroundColor="White">
+            <Image Source="splash" WidthRequest="64" HeightRequest="64"></Image>
             <Entry Placeholder="User New Email"  x:Name="UserNewEmail"></Entry>
-            <Entry Placeholder="User New Password"  x:Name="UserNewPassword"></Entry>
-            <Button BackgroundColor="Black" TextColor="White" Text="Signup" Clicked="signupbutton_Clicked" x:Name="signupbutton"/>
-            <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
-            <Button BackgroundColor="Orange" Clicked="Back_Clicked" TextColor="White" Text="Retour" x:Name="backbutton"/>
-            
+            <Entry Placeholder="User New Password"  x:Name="UserNewPassword" IsPassword="True"></Entry>
+            <Button BackgroundColor="#325785" TextColor="White" Text="Signup" Clicked="signupbutton_Clicked" x:Name="signupbutton"/>
+            <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#2f2e41"/>
+            <Button BackgroundColor="#2f2e41" Clicked="Back_Clicked" TextColor="White" Text="Retour" x:Name="backbutton"/>
+
+            <ActivityIndicator x:Name="activity"  
+                       IsRunning="False"  
+                       IsEnabled="False"  
+                       IsVisible="False"  
+                       Color="#325785"  
+                       BackgroundColor="Transparent"
+                      />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

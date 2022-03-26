@@ -2,23 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Auth.MainPage"
-             BackgroundImageSource="Radiant.png"
-             >
+           
+              BackgroundColor="White">
 
-    <StackLayout Margin="20" VerticalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical" >
+    <StackLayout Margin="20" VerticalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical" BackgroundColor="White" >
 
-       
+        <Image Source="splash" WidthRequest="64" HeightRequest="64"></Image>
         <Entry Placeholder="User  Email"  x:Name="UserLoginEmail"></Entry>
-        <Entry Placeholder="User Password"  x:Name="UserLoginPassword"></Entry>
-        <Button BackgroundColor="Black" Clicked="loginbutton_Clicked" TextColor="White" Text="Connexion" x:Name="loginbutton"/>
-        <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
-        <Button BackgroundColor="Orange" Clicked="Register_Clicked" TextColor="White" Text="Inscription" x:Name="registerbutton" />
+        <Entry Placeholder="User Password"  x:Name="UserLoginPassword" IsPassword="True"></Entry>
+        <Button BackgroundColor="#325785" Clicked="loginbutton_Clicked" TextColor="White" Text="Connexion" x:Name="loginbutton"/>
+        <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#2f2e41"/>
+        <Button BackgroundColor="#2f2e41" Clicked="Register_Clicked" TextColor="White" Text="Inscription" x:Name="registerbutton" />
 
         <ActivityIndicator x:Name="activity"  
                        IsRunning="False"  
                        IsEnabled="False"  
                        IsVisible="False"  
-                       Color="Orange"  
+                       Color="#325785"  
                        BackgroundColor="Transparent"
                       />
     </StackLayout>

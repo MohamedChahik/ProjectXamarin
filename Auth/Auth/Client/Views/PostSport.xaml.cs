@@ -1,4 +1,5 @@
 ﻿using Auth.Client.ViewModel;
+using Auth.Server.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,11 @@ namespace Auth.Client.Views
         {
             InitializeComponent();
             BindingContext = new ViewSport();
+        }
+        async void Addsport_Clicked(object sender, EventArgs args)
+        {
+
+            await Navigation.PushAsync(new NewsFeedSport());
         }
     }
 }

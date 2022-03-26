@@ -20,7 +20,7 @@
                             </Grid.GestureRecognizers>
                         </Grid>
                     </Frame>
-                    <Button BackgroundColor="Black" TextColor="White" Clicked="Button_Clicked" Text="Send"/>
+                    <Button BackgroundColor="#2097F4" TextColor="White" Clicked="Button_Clicked" Text="Ajouter"/>
                 </StackLayout>
                 <ActivityIndicator Color="Black"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="False" x:Name="MyActivity"/>
             </Grid>

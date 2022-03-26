@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Auth.Server.Views.NewsFeedNews">
+             x:Class="Auth.Server.Views.NewsFeedNews" BackgroundColor="White">
     <ContentPage.Content>
         <ScrollView>
             <Grid>
                 <StackLayout  Spacing="20" VerticalOptions="CenterAndExpand" Margin="10">
-                    <Label FontAttributes="Bold" FontSize="16" TextColor="White" Text="Enter your news here"/>
+                    <Label FontAttributes="Bold" FontSize="16" TextColor="#325785" Text="Entrer votre annonce :"/>
                     <Frame Visual="Material" HasShadow="False" BorderColor="LightGray">
-                        <Editor HeightRequest="150" Placeholder="Add your News here !" x:Name="AdminText"></Editor>
+                        <Editor HeightRequest="150" Placeholder="Ajouter votre texte ici" x:Name="AdminText"></Editor>
                     </Frame>
                     <Frame HasShadow="False" BorderColor="LightGray" Padding="1">
                         <Grid>
-                            <Label x:Name="BackText" Text="Upload News Header Image Here !" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            <Label x:Name="BackText" Text="Inserer votre image ici" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                             <Image x:Name="MyImage" Aspect="AspectFit" HeightRequest="250">
                             </Image>
                             <Grid.GestureRecognizers>
@@ -20,9 +20,9 @@
                             </Grid.GestureRecognizers>
                         </Grid>
                     </Frame>
-                   <Button BackgroundColor="Black" TextColor="White" Clicked="Button_Clicked" Text="Send"/>
+                    <Button BackgroundColor="#325785" TextColor="White" Clicked="Button_Clicked" Text="Ajouter"/>
                 </StackLayout>
-                <ActivityIndicator Color="Black"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="False" x:Name="MyActivity"/>
+                <ActivityIndicator Color="#2097F4"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="False" x:Name="MyActivity"/>
             </Grid>
 
         </ScrollView>

@@ -24,7 +24,13 @@ namespace Auth
 
         async void loginbutton_Clicked(System.Object sender, System.EventArgs e)
         {
-
+            activity.IsEnabled = true;
+            activity.IsRunning = true;
+            activity.IsVisible = true;
+            await Task.Delay(2000);
+            activity.IsEnabled = false;
+            activity.IsRunning = false;
+            activity.IsVisible = false;
 
             var authProvider = new FirebaseAuthProvider(new FirebaseConfig(WebAPIkey));
             try
@@ -52,11 +58,12 @@ namespace Auth
             activity.IsRunning = false;
             activity.IsVisible = false;
 
-            App.Current.MainPage = new NavigationPage(new Register());
+            await Navigation.PushAsync(new Register());
 
             
 
         }
+       
 
     }
 }

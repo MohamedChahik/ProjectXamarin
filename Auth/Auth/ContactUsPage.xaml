@@ -7,11 +7,11 @@
     <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="20,0">
         <!--Timeline -->
         <Frame Grid.Row="0" BorderColor="White" VerticalOptions="Start" HeightRequest="160" HasShadow="False" CornerRadius="20" Margin="0,45,0,20" Padding="0" IsClippedToBounds="True">
-            <Image Source="pros" Aspect="AspectFill"/>
+            <Image Source="contactbg" Aspect="AspectFill"/>
         </Frame>
         <!-- Image Profile-->
         <Frame Grid.Row="1" Margin="0,-90,0,0" BorderColor="White" HorizontalOptions="Center" WidthRequest="110" HeightRequest="{OnPlatform iOS='110', Android='20'}" HasShadow="False" CornerRadius="55" Padding="0" IsClippedToBounds="True">
-            <Image Source="splash" Aspect="AspectFill"/>
+            <Image Source="splash"/>
         </Frame>
         <!-- Profile name & general description-->
         <Label Grid.Row="2" Text="Ecole Iris" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="22"/>
@@ -24,14 +24,15 @@
 -->
         </Grid>
 
-            <Button Grid.Row="4"  Text="find Us!"
+            <Button Grid.Row="5" Text="find Us!"
                     HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand"
-     
+                    BackgroundColor="#2097F4"
+                    TextColor="White"
                 Clicked="findUsButton" />
 
-            <Label Grid.Row="5" Text="Commentaire" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Start" Margin="0,40,0,20" FontSize="20"/>
-        <Label Grid.Row="6" TextColor="#8d92b9" HorizontalTextAlignment="Start" FontSize="15" 
+            <Label Grid.Row="6" Text="Commentaire" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Start" Margin="0,40,0,20" FontSize="20"/>
+        <Label Grid.Row="7" TextColor="#8d92b9" HorizontalTextAlignment="Start" FontSize="15" 
                    Text="Ceci est le descriptif de notre application"/>
     </Grid>
         </StackLayout>
