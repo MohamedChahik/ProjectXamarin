@@ -20,6 +20,7 @@
                                 <Label MaxLines="4" LineBreakMode="TailTruncation"  TextColor="#325785" HorizontalTextAlignment="Start"  Text="{Binding News}"/>
                                 <Label Text="                          " TextColor="#2f2e41" FontSize="10"></Label>
                                 <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#2f2e41"/>
+                                <Label TextColor="#325785" FontSize="10" Text="{Binding Email}" />
 
                             </StackLayout>
                         </Grid>

@@ -20,6 +20,7 @@ namespace Auth.Server.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewsFeedPro : ContentPage
     {
+        MyDashBoardPage myDashBoardPage = new MyDashBoardPage();
         public NewsFeedPro()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace Auth.Server.Views
                     FirebaseClient fc = new FirebaseClient("https://test-abb0f-default-rtdb.firebaseio.com/");
                     var result = await fc
                      .Child("TablePro")
-                     .PostAsync(new TablePro() { NewsDateTime = DateTime.UtcNow.ToLocalTime().ToString("dd MMM yyyy"), NewsText = AdminText.Text, IDentifier = guid.ToString(), NewsDetailTime = DateTime.UtcNow.ToLocalTime() });
+                     .PostAsync(new TablePro() { NewsDateTime = DateTime.UtcNow.ToLocalTime().ToString("dd MMM yyyy"), NewsText = AdminText.Text, Email = myDashBoardPage.GetUsername(), IDentifier = guid.ToString(), NewsDetailTime = DateTime.UtcNow.ToLocalTime() });
                     PerformStorage(guid);
                 }
                 else

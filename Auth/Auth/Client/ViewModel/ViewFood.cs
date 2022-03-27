@@ -44,6 +44,7 @@ using Xamarin.Forms;
               {
                   NewsDateTime = item.Object.NewsDateTime,
                   NewsText = item.Object.NewsText,
+                  Email = item.Object.Email,
                   IDentifier = item.Object.IDentifier
               }).ToList().OrderBy(i => i.NewsDateTime);
 
@@ -64,7 +65,7 @@ using Xamarin.Forms;
                             .Child(groupitems.IDentifier + ".png").GetDownloadUrlAsync();
 
 
-                        newsGroup.Add(new ClientNewsModel() { News = groupitems.NewsText, NewsImagePath = filepath });
+                        newsGroup.Add(new ClientNewsModel() { News = groupitems.NewsText, NewsImagePath = filepath, Email = groupitems.Email});
                     }
 
                     NewsItem.Add(newsGroup);

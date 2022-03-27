@@ -20,6 +20,7 @@ namespace Auth.Server.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewsFeedNews : ContentPage
     {
+        MyDashBoardPage myDashBoardPage = new MyDashBoardPage();
         public NewsFeedNews()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace Auth.Server.Views
                     FirebaseClient fc = new FirebaseClient("https://test-abb0f-default-rtdb.firebaseio.com/");
                     var result = await fc
                      .Child("TableNews")
-                     .PostAsync(new TableNews() { NewsDateTime = DateTime.UtcNow.ToLocalTime().ToString("dd MMM yyyy"), NewsText = AdminText.Text, IDentifier = guid.ToString(), NewsDetailTime = DateTime.UtcNow.ToLocalTime() });
+                     .PostAsync(new TableNews() { NewsDateTime = DateTime.UtcNow.ToLocalTime().ToString("dd MMM yyyy"), NewsText = AdminText.Text, Email = myDashBoardPage.GetUsername(), IDentifier = guid.ToString(), NewsDetailTime = DateTime.UtcNow.ToLocalTime() });
                     PerformStorage(guid);
                 }
                 else

@@ -10,6 +10,7 @@ namespace Auth.Server.Model
         public string NewsDateTime { get; set; }
         public DateTime NewsDetailTime { get; set; }
 
+        public string Email {  get; set; }
         public string IDentifier { get; set; }
     }
 }

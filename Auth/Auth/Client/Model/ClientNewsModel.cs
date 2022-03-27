@@ -10,6 +10,10 @@ namespace FBGroupingApp.Client.Model
      public string News { get; set; }
      public  ImageSource NewsImagePath { get; set; }
 
+	public string Email { get; set; }
+
+
+
 	 public ClientNewsModel()
     {
 

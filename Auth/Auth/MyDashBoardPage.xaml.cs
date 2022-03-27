@@ -18,6 +18,18 @@ namespace Auth
     public partial class MyDashBoardPage : ContentPage
     {
         public string WebAPIkey = "AIzaSyCEeTMHbfZeMKfYGpoeR_gyFs0lu16h32o";
+
+        private string username;
+
+        public string GetUsername()
+        {
+            return username;
+        }
+
+        public void SetUsername(string username)
+        {
+            this.username = username;
+        }
         public MyDashBoardPage()
         {
             InitializeComponent();
@@ -37,6 +49,7 @@ namespace Auth
                 Preferences.Set("MyFirebaseRefreshToken", JsonConvert.SerializeObject(RefreshedContent));
                 //Now lets grab user information
                 MyUserName.Text = savedfirebaseauth.User.Email;
+                SetUsername(savedfirebaseauth.User.Email);
 
             }
             catch (Exception ex)
