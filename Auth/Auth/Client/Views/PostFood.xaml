@@ -35,8 +35,7 @@
                                     Clicked="OnClick"
                                     Pressed="OnPress"
                                 />
-                                <Label Text="{Binding MyStringProperty}"/>
-                                <Label x:Name="bindingText" Text="test" />
+                                <Label Text="{Binding MyStringProperty}"/>                              
                                 <Label x:Name="compteurLabel" HorizontalOptions="Center" TextColor="White" FontSize="60" Text="0"/>
                             </StackLayout>
                         </Grid>
