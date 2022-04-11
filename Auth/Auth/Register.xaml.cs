@@ -36,6 +36,12 @@ namespace Auth
                 var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(UserNewEmail.Text, UserNewPassword.Text);
                 string gettoken = auth.FirebaseToken;
                 await App.Current.MainPage.DisplayAlert("Bienvenue","Inscription réussis" , "OK");
+                 string email = UserNewEmail.Text;
+                string password = UserNewPassword.Text;
+                FirebaseClient fc = new FirebaseClient("https://test-abb0f-default-rtdb.firebaseio.com/");
+                var result = await fc
+                    .Child("Users")
+                    .PostAsync(new TableUsers() { Token = gettoken, Email = email, isPrenium= false})
             }
             catch (Exception ex)
             {

@@ -23,6 +23,7 @@
                                 <Label TextColor="#325785" FontSize="10" Text="{Binding Email}" />
                                 <Label TextColor="#325785" FontSize="10" Text="{Binding Username}" />
                                 <Label TextColor="#325785" FontSize="10" Text="{Binding PhoneNumber}" />
+                                <Label TextColor="#325785" FontSize="10" Text="Test" />
                             </StackLayout>
                         </Grid>
                     </ViewCell>
