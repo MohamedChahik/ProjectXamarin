@@ -1,5 +1,8 @@
 ﻿using Acr.UserDialogs;
+using Auth.Server.Model;
 using Firebase.Auth;
+using Firebase.Database;
+using Firebase.Database.Query;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -41,7 +44,7 @@ namespace Auth
                 FirebaseClient fc = new FirebaseClient("https://test-abb0f-default-rtdb.firebaseio.com/");
                 var result = await fc
                     .Child("Users")
-                    .PostAsync(new TableUsers() { Token = gettoken, Email = email, isPrenium= false})
+                    .PostAsync(new TableUsers() { Token = gettoken, Email = email, isPrenium = false });
             }
             catch (Exception ex)
             {
