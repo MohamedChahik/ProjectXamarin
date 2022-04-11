@@ -25,5 +25,16 @@ namespace Auth.Client.Views
            
             await Navigation.PushAsync(new NewsFeedFood());
         }
+
+        private void OnClick(object sender, EventArgs e)
+        {
+        }
+
+
+        private void OnPress(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            button.TextColor = Color.Blue;
+        }
     }
 }

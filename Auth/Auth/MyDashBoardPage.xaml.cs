@@ -93,9 +93,9 @@ namespace Auth
         {
             App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
         }
-        void cpt_Clicked(object sender, EventArgs args)
+        async void cpt_Clicked(object sender, EventArgs args)
         {
-            App.Current.MainPage = new NavigationPage(new MyDashBoardPage());
+            await Navigation.PushAsync(new PostProvider());
         }
         async void contact_Clicked(object sender, EventArgs args)
         {

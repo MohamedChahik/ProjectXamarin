@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Auth.Server.Views.ProviderView" BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <StackLayout  Spacing="20" VerticalOptions="CenterAndExpand" Margin="10">
+                    <Label FontAttributes="Bold" FontSize="16" TextColor="#325785" Text="Nom d'utilisateur :"/>
+                    <Frame Visual="Material" HasShadow="False" BorderColor="LightGray">
+                        <Editor HeightRequest="50" Placeholder="Ajouter votre nom d'utilisateur ici" x:Name="AdminUsername"></Editor>
+                    </Frame>
+                    <Label FontAttributes="Bold" FontSize="16" TextColor="#325785" Text="Numéro de téléphone :"/>
+                    <Frame Visual="Material" HasShadow="False" BorderColor="LightGray">
+                        <Editor HeightRequest="50" Placeholder="Ajouter votre Numéro de téléphone ici" x:Name="AdminPhoneNumber"></Editor>
+                    </Frame>
+                    <Label FontAttributes="Bold" FontSize="16" TextColor="#325785" Text="Description :"/>
+                    <Frame Visual="Material" HasShadow="False" BorderColor="LightGray">
+                        <Editor HeightRequest="150" Placeholder="Ajouter votre description ici" x:Name="Description"></Editor>
+                    </Frame>
+                    <Label FontAttributes="Bold" FontSize="16" TextColor="#325785" Text="Adresse :"/>
+                    <Frame Visual="Material" HasShadow="False" BorderColor="LightGray">
+                        <Editor HeightRequest="150" Placeholder="Ajouter votre adresse ici" x:Name="AdminAddress"></Editor>
+                    </Frame>
+                    <Frame HasShadow="False" BorderColor="LightGray" Padding="1">
+                        <Grid>
+                            <Label x:Name="BackText" Text="Inserer votre image ici" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            <Image x:Name="MyImage" Aspect="AspectFit" HeightRequest="250">
+                            </Image>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </Frame>
+                    <Button BackgroundColor="#325785" TextColor="White" Clicked="Button_Clicked" Text="Ajouter"/>
+                </StackLayout>
+                <ActivityIndicator Color="#2097F4"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="False" x:Name="MyActivity"/>
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

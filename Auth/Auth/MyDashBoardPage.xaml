@@ -6,7 +6,7 @@
               Title="Iris">
     <ContentPage.ToolbarItems >
         <ToolbarItem Text="Categorie" Clicked="cat_Clicked"  ></ToolbarItem>
-        <ToolbarItem Text="Compte" Clicked="cpt_Clicked" ></ToolbarItem>
+        <ToolbarItem Text="Anonceur" Clicked="cpt_Clicked" ></ToolbarItem>
         <ToolbarItem Text="Contact" Clicked="contact_Clicked" ></ToolbarItem>
     </ContentPage.ToolbarItems>
 

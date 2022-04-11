@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Auth.Client.Views.PostProvider"
+             Title="Providers" BackgroundColor="White">
+
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Text="Add+" Clicked="AddProvider_Clicked"  ></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content >
+        <ListView BackgroundColor="White" ItemsSource="{Binding ProviderItem,Mode=TwoWay}" SeparatorVisibility="None"  HasUnevenRows="True"
+			IsGroupingEnabled="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid HeightRequest="340"  ColumnDefinitions="0.1*, 9*" Margin="10">
+                            <BoxView HorizontalOptions="StartAndExpand" HeightRequest="150" WidthRequest="1" BackgroundColor="Black" Margin="5"/>
+                            <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="1">
+                                <Image  Aspect="AspectFill" HeightRequest="250" HorizontalOptions="FillAndExpand" Source="{Binding ProviderImagePath}" />
+                                <Label Text="                          " TextColor="#2f2e41" FontSize="10"></Label>
+                                <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#2f2e41"/>
+                                <Label TextColor="#325785" FontSize="10" Text="{Binding Email}" />
+                                <Label TextColor="#325785" FontSize="10" Text="{Binding Username}" />
+                                <Label TextColor="#325785" FontSize="10" Text="{Binding PhoneNumber}" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand"  RowDefinitions="Auto,Auto" Margin="15">
+                            <Label TextColor="#325785" HorizontalTextAlignment="Start" Grid.Row="1" Text="{Binding ProviderDateTime}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
