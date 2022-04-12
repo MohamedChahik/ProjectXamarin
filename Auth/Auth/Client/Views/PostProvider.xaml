@@ -9,7 +9,7 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content >
-        <ListView BackgroundColor="White" ItemsSource="{Binding ProviderItems,Mode=TwoWay}" SeparatorVisibility="None"  HasUnevenRows="True"
+        <ListView BackgroundColor="White" ItemsSource="{Binding ProvidersItem,Mode=TwoWay}" SeparatorVisibility="None"  HasUnevenRows="True"
 			IsGroupingEnabled="true">
             <ListView.ItemTemplate>
                 <DataTemplate>
