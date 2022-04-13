@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Auth.Client.ViewModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -48,7 +49,7 @@ namespace Auth
                 var RefreshedContent = await authProvider.RefreshAuthAsync(savedfirebaseauth);
                 Preferences.Set("MyFirebaseRefreshToken", JsonConvert.SerializeObject(RefreshedContent));
                 //Now lets grab user information
-                MyUserName.Text = savedfirebaseauth.User.Email;
+                /*MyUserName.Text = savedfirebaseauth.User.Email;*/
                 SetUsername(savedfirebaseauth.User.Email);
 
             }
@@ -63,7 +64,15 @@ namespace Auth
         }
 
 
-
+        async void PreniumClicked(object sender, EventArgs args)
+        {
+            /*Preferences.Get("MyFirebaseRefreshToken", "");*/
+            if (username == "simohamed.chahik@gmail.com")
+            {
+                await Navigation.PushAsync( new PostPrenium());
+            }
+            else await DisplayAlert("Alert", "Vous n'êtes pas un utilisateur prenium", "OK");
+        }
         void Logout_Clicked(System.Object sender, System.EventArgs e)
         {
             Preferences.Remove("MyFirebaseRefreshToken");
@@ -101,6 +110,11 @@ namespace Auth
         {
          
             await Navigation.PushAsync(new ContactUsPage());
+        }
+        async void user_Clicked(object sender, EventArgs args)
+        {
+         
+            await Navigation.PushAsync(new AccountUser());
         }
 
     }

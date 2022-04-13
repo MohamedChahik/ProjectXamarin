@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Auth.AccountUser">
+    <StackLayout>
+            <!-- Main layout-->
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="10,0">
+        <!--Timeline -->
+        <Frame Grid.Row="0" BorderColor="White" VerticalOptions="Start" HeightRequest="160" HasShadow="False" CornerRadius="20" Margin="0,25,0,20" Padding="0" IsClippedToBounds="True">
+            <Image Source="user" Aspect="AspectFill"/>
+        </Frame>
+        <!-- Image Profile-->
+        <Frame Grid.Row="1" Margin="0,-60,0,0" BorderColor="White" HorizontalOptions="Center" WidthRequest="110" HeightRequest="{OnPlatform iOS='110', Android='20'}" HasShadow="False" CornerRadius="55" Padding="0" IsClippedToBounds="True">
+            <Image Source="splash"/>
+        </Frame>
+        <!-- Profile name & general description-->
+        <Label Grid.Row="2" Text="Mohamed" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="22"/>
+        <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0">
+            <Button Grid.Column="0" ImageSource="location" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#2097F4" Clicked="sendPrenium"/>
+            <Label Grid.Column="1" Text="89100 Sens" FontSize="15" TextColor="#9192b7"/>
+            <Button Grid.Column="2" ImageSource="age" Margin="10,0,0,0" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#2097F4" />
+            <Label Grid.Column="3" Text=" +3306060606" FontSize="15" TextColor="#9192b7"/>
+        </Grid>
+        <Label Grid.Row="6" Text="Email :" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Start" FontSize="10"/>
+        <Label Grid.Row="6" Text="Email :" x:Name="MyUserName" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Start" FontSize="10" Margin="30,0,0,20" />
+        <Label Grid.Row="5" Text="Description de l'user" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Start" Margin="0,20,0,20" FontSize="20"/>
+        <Label Grid.Row="7" TextColor="#8d92b9" HorizontalTextAlignment="Start" FontSize="15" 
+               Text="Vous souhaitez avoir un compte prenium, contactez nous"/>
+            <Button Grid.Row="8" Text="Demande"
+                    HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                    BackgroundColor="#2097F4"
+                    TextColor="White"
+                Clicked="sendPrenium" />
+
+        <Label Grid.Row="9" TextColor="#8d92b9" HorizontalTextAlignment="Start" FontSize="10" 
+                   Text="Utilisateur crée depuis 13/04/2022"/>
+    </Grid>
+            <Button x:Name="Logout" Text="Logout" BackgroundColor="#325785" TextColor="White" Clicked="Logout_Clicked" Margin="35"/> 
+        </StackLayout>
+</ContentPage>

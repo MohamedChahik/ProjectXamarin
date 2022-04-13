@@ -8,6 +8,7 @@
         <ToolbarItem Text="Categorie" Clicked="cat_Clicked"  ></ToolbarItem>
         <ToolbarItem Text="Anonceur" Clicked="cpt_Clicked" ></ToolbarItem>
         <ToolbarItem Text="Contact" Clicked="contact_Clicked" ></ToolbarItem>
+        <ToolbarItem Text="Account" Clicked="user_Clicked" ></ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -31,9 +32,17 @@
                 <ImageButton Source="pros" Grid.Row="1" Grid.Column="1" BackgroundColor="White" BorderWidth="1" BorderColor="#325785" Margin="15" Clicked="Pros_Clicked" />
 
             </Grid>
-            <Label Text="Curent User :" x:Name="MyUserName" FontSize="Caption" TextColor="#325785" Margin="15"></Label>
+            <!--<Grid BackgroundColor="White">
+               
+            </Grid>-->
+            <Label Text="Vous êtes un utilisateur prenium, accédez en exclusivisité en cliquant sur la catégorie ci-dessous" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            <ImageButton Source="prenium" BorderWidth="1" BorderColor="#325785" Margin="10" Clicked="PreniumClicked" 
+                         BackgroundColor="#00ff00" CornerRadius="30" 
+                         HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
+                         HeightRequest="60" WidthRequest="60"/>
+            <!--<Label Text="Curent User :" x:Name="MyUserName" FontSize="Caption" TextColor="#325785" Margin="15"></Label>
 
-            <Button x:Name="Logout" Text="Logout" BackgroundColor="#325785" TextColor="White" Clicked="Logout_Clicked" Margin="15"/> 
+            <Button x:Name="Logout" Text="Logout" BackgroundColor="#325785" TextColor="White" Clicked="Logout_Clicked" Margin="15"/> -->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
